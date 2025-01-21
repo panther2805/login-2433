@@ -1,0 +1,29 @@
+# any k8s file has 4 stop level
+apiVersion: 
+kind: 
+metadata:
+spec:
+
+# pod
+apiVersion: v1
+kind: pod 
+metadata:
+    name: pod-example
+spec:
+  containers:
+  - name: ubuntu
+    image: ubuntu:trusty
+    command: ['echo']
+    args: ["hello world"]
+
+# deployment
+apiVersion: apps/v1
+kind: deployment
+metadata:
+    name: deployment-example
+spec:
+  containers:
+  - name: ubuntu
+    image: ubuntu:trusty
+    command: ['echo']
+    args: ["hello world"]    
